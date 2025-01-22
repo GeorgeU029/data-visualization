@@ -3,9 +3,12 @@ from random_walk import RandomWalk
 
 # Make a random walk and plot the points
 while True:
+    
     rw = RandomWalk(50000)
     rw.fill_walk()
-    
+    #Set the size of the plotting window.
+    plt.figure(figsize=(10,6))
+
     point_numbers = list(range(rw.num_points))
     # Create the plot, highlighting the start and end of the walk
     plt.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=.5)
